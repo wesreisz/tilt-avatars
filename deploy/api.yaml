@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: tilt-avatar-api
-          image: tilt-avatar-api
+          image: registry.localhost:5000/tilt-avatar-api
           ports:
             - containerPort: 4000
           readinessProbe:
