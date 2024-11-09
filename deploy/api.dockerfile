@@ -12,4 +12,5 @@ COPY api/ ./api/
 ENV FLASK_APP=./api/app.py
 ENV FLASK_ENV=development
 
-CMD [ "flask", "run", "--host", "0.0.0.0" ]
+CMD [ "flask", "run", "--host", "0.0.0.0" , "-p" , "4000"]
+
