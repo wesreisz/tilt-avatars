@@ -36,21 +36,3 @@ spec:
     targetPort: 5173
   selector:
     app: tilt-avatar-web
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: tilt-avatar-ingress
-  namespace: default
-spec:
-  ingressClassName: traefik
-  rules:
-  - http:
-      paths:
-      - backend:
-          service:
-            name: tilt-avatar-svc
-            port:
-              number: 5173
-        path: /
-        pathType: Exact
