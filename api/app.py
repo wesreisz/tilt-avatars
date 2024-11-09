@@ -66,11 +66,11 @@ def avatar():
             # enum by value, e.g. `#262E33`
             params[p] = part_enum(params[p])
 
-   #clothing = 'tw_shirt'
+    clothing = 'tw_shirt'
     #clothing_color = tilt_green
 
     # ↓↓↓ remove the leading # to uncomment ↓↓↓
-    clothing = 'docker_shirt'
+    #clothing = 'docker_shirt'
     clothing_color = docker_blue
     # ↑↑↑ remove the leading # to uncomment ↑↑↑
 
