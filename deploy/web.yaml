@@ -22,7 +22,7 @@ spec:
             - name: VITE_CLIENT_PORT
               value: '5735'
           ports:
-            - containerPort: 3000
+            - containerPort: 5173
 ---
 apiVersion: v1
 kind: Service
@@ -31,9 +31,9 @@ metadata:
   namespace: default
 spec:
   ports:
-  - port: 3000
+  - port: 5173
     protocol: TCP
-    targetPort: 3000
+    targetPort: 5173
   selector:
     app: tilt-avatar-web
 ---
@@ -51,6 +51,6 @@ spec:
           service:
             name: tilt-avatar-web
             port:
-              number: 3000
+              number: 5173
         path: /
         pathType: Exact
