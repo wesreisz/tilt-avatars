@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: tilt-avatar-web
-          image: registry.localhost:5000/tilt-avatar-web
+          image: registry.localhost:5000/tilt-avatar-web:latest
           env:
             - name: VITE_CLIENT_PORT
               value: '5735'
