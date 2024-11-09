@@ -27,7 +27,7 @@ jobs:
          
       - name: Push Docker Image to Local Registry
         run: |
-          docker push registry.localhost:5000/tilt-avatar-web:latest
+          docker push registry.localhost:5000/tilt-avatar-web:$BUILD
 
       - name: Build Docker Image (api) 
         run: |
@@ -35,7 +35,7 @@ jobs:
 
       - name: Push Docker Image to Local Registry
         run: |
-          docker push registry.localhost:5000/tilt-avatar-api:latest 
+          docker push registry.localhost:5000/tilt-avatar-api:$BUILD
 
       - name: Echo what was done
         shell: bash
