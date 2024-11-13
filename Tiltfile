@@ -9,8 +9,8 @@ version_settings(constraint='>=0.22.2')
 # https://docs.tilt.dev/api.html#api.docker_build
 # https://docs.tilt.dev/live_update_reference.html
 docker_build(
-    'registry.localhost:5000/tilt-avatar-api',
-    #'tilt-avatar-api',
+    #'registry.localhost:5000/tilt-avatar-api',
+    'tilt-avatar-api',
     context='.',
     dockerfile='./deploy/api.dockerfile',
     only=['./api/'],
@@ -45,8 +45,8 @@ k8s_resource(
 # https://docs.tilt.dev/api.html#api.docker_build
 # https://docs.tilt.dev/live_update_reference.html
 docker_build(
-    'registry.localhost:5000/tilt-avatar-web',
-    #'tilt-avatar-web',
+    #'registry.localhost:5000/tilt-avatar-web',
+    'tilt-avatar-web',
     context='.',
     dockerfile='./deploy/web.dockerfile',
     only=['./web/'],
